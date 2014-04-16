@@ -1,13 +1,3 @@
-#Affecting Player Variables:
-
-Use `hpUpdate(#)` to add or remove HP.
-
-Use `numberUpdate(#)` to add or remove spits. TODO: Rename to `lootUpdate()`.
-
-#Affecting output:
-
-Use `moneyTitle()` to generate a random, humorous name for money. "You find 7 greenbacks!"
-
 #Event structure:
 
 When the first button is pressed, `eventOccurance()` is called. `eventOccurance()` starts with these three things:
@@ -70,6 +60,12 @@ If you need a random number, don't code it yourself. We have `randomIntfromInter
 --------------------
 
 `thisSceneBy.innerHTML` is a variable that can be used (and called, for whatever reason you may have) to set who wrote this scene. _(Fun fact: It was actually inspired by TiTs of all things.)_ This value is reset to "Nobody" on `endEvent()`.
+
+--------------------
+
+Use `hpUpdate(#)` to add or remove HP. Use `lootUpdate(#)` to add or remove spits. Use `moneyTitle()` to generate a random, humorous name for money. "You find 7 greenbacks!"
+
+--------------------
 
 #Doing Combat
 
