@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <title>&#10086; Land pirates! &#10086;</title>
+</head>
+<body>
+  <div id="loading" style="font-family: serif; font-style: italic; font-size: 14pt; font-weight: bold; padding: 10%; position: fixed; text-align: center; left: 0; right: 0; top: 0; bottom: 0; background: #FFF; z-index: 99999;">
+    <h1 style="font-size:38pt; margin: 5px;">LAND PIRATES</h1>
+    <p style="padding: 5px;">is loading, so</p>
+    <p style="padding: 5px; font-size: 56pt; margin: -10pt 0 3.75pt; font-style: none;">GET OVER IT!</p>
+  </div>
+  <link rel="stylesheet" href="style.css">
+  <div id="numberBox">
+    <img src="avatar.png" alt="Stats">
+    <p>Funds: &#10086;<span id="totalloot">0</span><br>
+    HP: <span id="hitpoints">??</span>/<span id="totalhitpoints">??</span></p>
+    <button onClick="eventOccurance()" id="adventurebutton">Adventure!</button><button>Inventory</button><button>Ship</button><button onClick="showOptions()">Options</button>
+  </div><!-- end #numberBox -->
+  <div id="main">
+    <div id="debug" style="display: none;">
+      &#10086;: <button onClick="numberUpdate(-10)">-10</button> <button onClick="numberUpdate(-1)">-1</button> <button onClick="numberUpdate(1)">+1</button> <button onClick="numberUpdate(10)">+10</button><br>
+      HP: <button onClick="hpUpdate(-10)">-10</button> <button onClick="hpUpdate(-1)">-1</button> <button onClick="hpUpdate(1)">+1</button> <button onClick="hpUpdate(10)">+10</button><br>
+      HPt: <button onClick="hpTotalUpdate(-10)">-10</button> <button onClick="hpTotalUpdate(-1)">-1</button> <button onClick="hpTotalUpdate(1)">+1</button> <button onClick="hpTotalUpdate(10)">+10</button><br>
+      <button onClick="finalizeEvent()">Get out of this event!</button>
+      <hr>
+    </div> <!-- end #debug -->
+    <div id="event"></div>
+    <button id="eventbutton" onClick="endEvent()" style="display: none;">OK</button>
+  </div> <!-- end #main -->
+  <div id="sceneBox">This scene by: <span id="scene">Nobody</span></div>
+  <div id="options">
+    <p class="large">&#10087;Options</p>
+    <button class="close" onClick="hideOptions()">Done</button>
+    <p><button onClick="resetAll()">New Game</button> <button onClick="showUpload()">Custom Events</button> <button onClick="showCredits()">Credits</button></p>
+    <p><button onClick="toggleDebug()">Toggle Debug Functions</button> <button>(Intense Quality Mode has been removed until further notice.)</button></p>
+    <a href="addingold.html">Old version</a><br>
+  </div> <!-- end #options -->
+  <div id="credits">
+    <button onClick="hideCredits()" class="close">Done</button>
+	<p class="large">&#10087;Credits</p>
+    <p>Images courtesy of the following sources:</p>
+    <p>Pixabay</p>
+    <ul>
+      <li><a href="http://pixabay.com/en/alexander-nasmyth-painting-81647/">Background by Alexander Nasmyth</a></li>
+      <li><a href="http://pixabay.com/en/texture-vintage-aged-paper-light-318903/">Options menu background by Zeana</a></li>
+      <li><a href="http://pixabay.com/en/man-face-avatar-silhouette-158229/">Sir Placeholder McDerpy VI by OpenClips</a></li>
+    </ul>
+    <p>Subtle Patterns</p>
+    <ul>
+      <li><a href="http://subtlepatterns.com/rice-paper-3/">Rice Paper #3</a></li>
+    </ul>
+  </div> <!-- end #credits -->
+  <div id="upload">
+    <button onClick="hideUpload()" class="close">Done</button>
+    <p class="large">&#10087;Load Events</p>
+      <p><input type="file" accept="application/javascript" id="fileupload"/><br>
+      <span id="uploading"></span></p>
+      <p>If you have a properly-formatted events file, you can select it here.</p>
+      <p>This uses the JavaScript file API. These files are not uploaded to any server and are read right off your computer. (This is what Imgur uses for upload preview thumbnails!)</p>
+      <p>I, the creator of this product, assume no responsibility for the files you, the user, select to use with this application. I have no say in how these files are written, who writes them, and how they interact with your computer. There is <u>no</u> validation for these files. You are using this feature at your own risk and discretion.</p>
+      <p>...However, if you would like a custom event example that you can load in yourself and won't harm your computer, I've made a file called <a href="exampleCustomEvents.js">exampleCustomEvents.js</a>. Right-click or command-click it and save it, then go right back and resubmit it!</p>
+    <p class="large">&#10087;Make Events</p>
+      <p>You can make your own events and import them right into the game.</p>
+      <p><a href="eventsDocumentation.md">Check out the documentation (In Markdown format)</a></p>
+      <p><a href="events.js">Check out some examples (Spoilers!)</a></p>
+    <p class="large">&#10087;Submit Events</p>
+      <p>If you have some events that you think would work great in the vanilla game, feel free to send them to me!</p>
+      <p>Don't give me any of that fork bomb crap, though. I thoroughly review files before execution.</p>
+      <p><a href="mailto:orangestar@cats4gold.net"><button>Email me!</button></a></p>
+  </div>
+  <script src="main.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>
