@@ -16,8 +16,7 @@ if (supports_local_storage() == false) {
 var debug = false,
 dead = false,
 eventActive = false,
-gameStarted = false;
-
+gameStarted = false,
 lootBox = document.getElementById('totalloot'),
 hpBox = document.getElementById('hitpoints')
 hpTotalBox = document.getElementById('totalhitpoints'),
@@ -53,7 +52,7 @@ hpTotalBox.innerHTML = totalHp;
 if (gameStarted == false) {
   document.getElementById('numberBox').style.top = '-180px';
   document.getElementById('main').style.top = '-100px';
-  eventBox.innerHTML = '<p>This is where I would explain the lore and it would be awesome and verbose.</p><button onClick="gameInit()">New Game</button>';
+  eventBox.innerHTML = '<p>Perhaps you&apos;ve heard of swashbuckling seafarers before, but have you ever heard such tales on the land? Romping through lush forests in their large, armored, treaded vehicles, these wayfaring wanderers seek cash and glory, often outside of the law. They are...</p><p style="font-size: 30pt; font-family: ' + "'Kaushan Script', cursive" + '">Land Pirates!</p><button onClick="gameInit()">New Game</button><p style="font-size: 10pt;">Land Pirates is designed for the latest two versions of the most popular browsers. If you experience problems, consider updating your browser.</p>';
 }
 
 function gameInit(){
