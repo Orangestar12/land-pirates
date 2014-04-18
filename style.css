@@ -56,15 +56,17 @@ button, button:focus {
   font-style: italic;
 }
 
+button::-moz-focus-inner {
+  /* CURSE YOU MOZILLA */
+  border: 0;
+}
+
 button.close, button.close:focus {
   position: absolute; 
-  top: 2pt; 
+  top: 3.5pt; 
   right: 10px;
   background: #77D; /* Fallback for a browser that doesn't support gradients at all. */
-    background: -webkit-gradient(linear, left top, left bottom, from(#88D), to(#66D)); /* For REALLY OLD versions of Safari and Chrome */
     background: -webkit-linear-gradient(top, #88D, #66D); /* For Chrome 10-25 and Safari (and Safari mobile). */
-    background: -moz-linear-gradient(top, #88D, #66D); /* For Firefoxes under 15, not including 1 and 2. */
-    background: -o-linear-gradient(#88D, #66D); /* For old Opera. */
     background: linear-gradient(#88D, #66D); /* ~Proper~ CSS3 Syntax for Linear Gradients. Good on everything modern that isn't Safari. */
   color: white;
   font-family: sans-serif;
